@@ -4,14 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--css 파일 불러오기-->
+    <link rel="stylesheet" href="./index.css" />
   </head>
-  <style>
-    table,
-    th,
-    td {
-      border: 1px solid black;
-    }
-  </style>
+
   <body>
     <h1>목차</h1>
     <ul>
@@ -31,6 +27,11 @@
     <h1 id="1"><a href="#top">1</a>. 개요</h1>
     <table style="text-align: center">
       <thead>
+        <thead>
+          <th colspan="9">
+            2024 LoL Champions Korea Spring<br />정규시즌 9주차 순위표
+          </th>
+        </thead>
         <th>순위</th>
         <th colspan="2">팀</th>
         <th>승</th>
@@ -42,40 +43,40 @@
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td>
+          <td id="bl">1</td>
+          <td id="bl">
             <img
               src="https://i.namu.wiki/i/A9XLWpqbq0c_u-Sk5zjdp2tpCx_tQ6z9fxYE5UzbpuRmjmbx38uZrp5cET4dKVlwiDlOA1eDtbq5tCLxlF75euA018cpkbqdjeXGXZiwGJ3GIHhZnGI5_CKCpBk6sIOc6BS5HLW2Vz0_VXZVQ05rxg.svg"
               alt="고양이 사진"
               style="width: 25px; height: 25px"
             />
           </td>
-          <td>GEN</td>
-          <td>15</td>
-          <td>1</td>
-          <td>30-5</td>
-          <td>+25</td>
-          <td>9승</td>
-          <td></td>
+          <td id="bl">GEN</td>
+          <td id="bl">15</td>
+          <td id="bl">1</td>
+          <td id="bl">30-5</td>
+          <td id="bl">+25</td>
+          <td id="bl">9승</td>
+          <td id="bl"></td>
         </tr>
         <tr>
-          <td>2</td>
-          <td>
+          <td id="bl">2</td>
+          <td id="gr">
             <img
               src="https://i.namu.wiki/i/li1A45T56LWQihVEkROYHUz1WT1OiIwzqcatJUlNQDpUmaztdoQ5GCb3_Nwp8ZE0-lZkU0u-pnhNxDi7ADxxPhwt5hgdpxw1JmIOj7r5_x5hJt1Qc6fqCqm5UKUaFGOva77rBCtlG-UB3rraGYAGYQ.svg"
               alt="고양이 사진"
               style="width: 25px; height: 25px"
             />
           </td>
-          <td>T1</td>
-          <td>13</td>
-          <td>3</td>
-          <td>28-8</td>
-          <td>+20</td>
-          <td>1패</td>
-          <td></td>
+          <td id="gr">T1</td>
+          <td id="gr">13</td>
+          <td id="gr">3</td>
+          <td id="gr">28-8</td>
+          <td id="gr">+20</td>
+          <td id="gr">1패</td>
+          <td id="gr"></td>
         </tr>
-        <tr>
+        <tr id="gr">
           <td>3</td>
           <td>
             <img
@@ -92,7 +93,7 @@
           <td>3승</td>
           <td></td>
         </tr>
-        <tr>
+        <tr id="gr">
           <td>4</td>
           <td>
             <img
@@ -109,7 +110,7 @@
           <td>4승</td>
           <td></td>
         </tr>
-        <tr>
+        <tr id="gr">
           <td>5</td>
           <td>
             <img
@@ -127,7 +128,7 @@
           <td></td>
         </tr>
         <tr>
-          <td>6</td>
+          <td id="gr">6</td>
           <td>
             <img
               src="https://i.namu.wiki/i/9j31pkZr_ZgCTPqjktolY0geJ35mp5Sb9O1Kkha_vR0aU7CL0zwpm5v07g0R9zOhlbZ2xzZY95Xh20ZLwaPjQg.svg"
@@ -144,7 +145,7 @@
           <td></td>
         </tr>
         <tr>
-          <td>7</td>
+          <td id="yl">7</td>
           <td>
             <img
               src="https://i.namu.wiki/i/rnAZY96zv4aaM5rsq0YNBvI-OejmW8pOK3AcaIklKjOmZ1TWkfVICxcdUCDg3Gp7E8krcm5J8l67g4_smT6sCg.svg"
@@ -160,7 +161,7 @@
           <td>2승</td>
           <td></td>
         </tr>
-        <tr>
+        <tr id="yl">
           <td>8</td>
           <td>
             <img
@@ -177,7 +178,7 @@
           <td>2패</td>
           <td></td>
         </tr>
-        <tr>
+        <tr id="yl">
           <td>9</td>
           <td>
             <img
@@ -194,7 +195,7 @@
           <td>2패</td>
           <td></td>
         </tr>
-        <tr>
+        <tr id="yl">
           <td>10</td>
           <td>
             <img
@@ -217,13 +218,33 @@
 
     <table>
       <thead>
+        <tr>
+          <td rowspan="2">9주차</td>
+          <td>패치버전</td>
+          <td>14.5</td>
+        </tr>
+        <tr>
+          <td>글로벌벤</td>
+          <td>
+            <img
+              src="https://i.namu.wiki/i/qoUAEPT0P-Et3bgxfLBXJ0mVkPNvkl0NRiKYduGMiKlbnFg8LCMryZuByTWaltSGlVFhNvbHmNnrRwErE_64PQ.webp"
+              width="50"
+              height="50"
+            />
+            <br />
+            아지르
+          </td>
+        </tr>
+      </thead>
+    </table>
+    <table>
+      <thead>
         <th rowspan="2">9주차</th>
         <th>패치 버전</th>
         <th>14.5</th>
       </thead>
       <tbody>
         <tr>
-          <td></td>
           <td>글로벌 밴</td>
           <td>아지르</td>
         </tr>

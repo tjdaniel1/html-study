@@ -1,0 +1,32 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/*class>id순으로 우선순위가 있음
+큰 태그 안에서 class 로 원하는 스타일을 줬다가 특정한 곳만 바꾸고 싶을때  id를 넣는다*/
+#gr {
+  background-color: rgb(14, 210, 0);
+}
+
+#bl {
+  background-color: rgb(0, 171, 251);
+}
+
+#yl {
+  background-color: rgb(206, 225, 0);
+}
+
+table:hover {
+  transition: all 2s ease;
+  transform: rotate(360deg);
+  transform: scale(2);
+}
+
+body:hover {
+  transition: all 2s ease;
+  transform: rotateY(360deg);
+}
