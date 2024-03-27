@@ -1,0 +1,12 @@
+.box {
+  height: 100vh;
+}
+.show {
+  transition: all 5s;
+  background-color: aqua;
+}
+.up {
+  position: fixed;
+  top: 90vh;
+  margin-left: 90vw;
+}

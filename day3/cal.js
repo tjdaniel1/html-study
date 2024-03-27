@@ -25,7 +25,7 @@ cal[3](10);
 cal[4](2);
 cal[1](4);
 // const [total, sum] = cal;
-const total = cal;
+const [total] = cal;
 
 // console.log(cal[5]);
 // console.log(cal[0]);

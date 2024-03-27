@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        border: 1px solid black;
+      }
+      th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="txt">순위</h1>
+    <div id="box"></div>
+    <table style="border: 1px solid black" id="table">
+      <thead>
+        <th>팀 순위</th>
+        <th>팀 이름</th>
+        <th onclick="sortTableByWin()">승</th>
+        <th onclick="sortTableByLose()">패</th>
+        <th onclick="sortTableByDiff()">득실차</th>
+        <th onclick="sortTableByWinRate()">승률</th>
+        <th onclick="sortTableByKDA()">kda</th>
+        <th onclick="sortTableByKilll()">킬</th>
+        <th onclick="sortTableByDeath()">데스</th>
+        <th onclick="sortTableByAssist()">어시스트</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script src="./hs.js"></script>
+  </body>
+</html>

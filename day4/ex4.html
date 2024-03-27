@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="txt">순위</h1>
+    <div id="box"></div>
+    <table border="1" id="tbl">
+      <thead>
+        <th onclick="tblSort('rank')">팀 순위</th>
+        <th onclick="tblSort('win')">승</th>
+        <th onclick="tblSort('lose')">패</th>
+        <th onclick="tblSort('winLoseDiff')">득실차</th>
+        <th>승률</th>
+        <th>kda</th>
+        <th onclick="tblSort('kill')">킬</th>
+        <th onclick="tblSort('death')">데스</th>
+        <th onclick="tblSort('assist')">어시스트</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script src="./ex4.js"></script>
+  </body>
+</html>
