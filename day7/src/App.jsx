@@ -4,6 +4,7 @@ import { useState } from "react";
 import Box from "./components/Box";
 import Persons from "./components/Persons";
 import Boxes from "./components/Boxes";
+import Counter from "./components/Counter";
 
 // html 태그를 리턴하는 파일을 jsx
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <Counter></Counter>
       <Persons></Persons>
       <Boxes></Boxes>
     </div>
