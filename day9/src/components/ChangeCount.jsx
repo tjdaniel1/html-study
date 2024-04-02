@@ -1,4 +1,17 @@
-const ChangeCount = ({ onSubmit }) => {
+import { useRecoilState } from "recoil";
+import { countLogState, countState } from "../../store/countState";
+
+const ChangeCount = () => {
+  const [count, setCount] = useRecoilState(countState);
+  const [logs, setLogs] = useRecoilState(countLogState);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const { value } = document.getElementById("input");
+    console.log(value);
+    setCount(count + Number(value));
+    document.getElementById("input").value = 0;
+    setLogs([...logs, { number: value, date: new Date().toLocaleString() }]);
+  };
   return (
     <form className="flex" onSubmit={onSubmit}>
       <label
