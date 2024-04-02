@@ -140,7 +140,8 @@ function App() {
       );
     setTmp(te);
   };
-
+  const name = "kill";
+  console.log(lckList[0][name]);
   return (
     <div>
       <select onChange={(e) => setSearchKey(e.target.value)}>
