@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { countLogState, countState } from "../../store/countState";
+import { countLogState, countState } from "../store/countState";
 
 const ChangeCount = () => {
   const [count, setCount] = useRecoilState(countState);
@@ -7,18 +7,20 @@ const ChangeCount = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const { value } = document.getElementById("input");
-    console.log(value);
     setCount(count + Number(value));
     document.getElementById("input").value = 0;
-    setLogs([...logs, { number: value, date: new Date().toLocaleString() }]);
+    setLogs([
+      ...logs,
+      { number: Number(value), date: new Date().toLocaleString() },
+    ]);
   };
   return (
     <form className="flex" onSubmit={onSubmit}>
       <label
-        htmlFor="price"
+        htmlFor="input"
         className="block text-sm font-medium leading-6 text-gray-900"
       >
-        Input
+        input
       </label>
       <div className="relative mt-2 rounded-md shadow-sm">
         <input

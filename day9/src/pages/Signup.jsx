@@ -1,31 +1,40 @@
+import { useNavigate } from "react-router-dom";
+import { register } from "../api/auth";
 import Article from "../atom/Article";
 import Button from "../atom/Button";
-import Input from "../atom/input";
-import Label from "../atom/label";
+import Input from "../atom/Input";
+import Label from "../atom/Label";
+import { useState } from "react";
 
+// Signup.jsx
+// npm i axios
+// fetch
 const Signup = () => {
+  const navigate = useNavigate();
+  const [message, setMessage] = useState("");
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const password = document.getElementById("password").value;
+    try {
+      const res = await register({ name, password });
+      if (res.status === 201) navigate("/login");
+    } catch (error) {
+      setMessage(error.response.data);
+    }
+  };
+
   return (
     <div className="container">
       <Article>
-        <form>
+        <p>{message}</p>
+        <form onSubmit={onSubmit}>
           <Label htmlFor="name">name</Label>
-          {/* <label
-            htmlFor="name"
-            className="block text-sm font-medium leading-6 text-gray-900"
-          >
-            id
-          </label> */}
           <Input id="name" required />
           <Label htmlFor="password">password</Label>
-          {/* <label
-            htmlFor="password"
-            className="block text-sm font-medium leading-6 text-gray-900"
-          >
-            password
-          </label> */}
-          <Input id="password" type="password" />
+          <Input id="password" type="password" required />
           <hr className="m-4" />
-          <Button>Submit</Button>
+          <Button>submit</Button>
         </form>
       </Article>
     </div>

@@ -13,9 +13,10 @@ export const api = async (url, method, body) => {
     url,
     method,
     data: body,
+    headers: {
+      Authorization: localStorage.getItem("id"),
+    },
   });
-  console.log(res);
-  console.log("asdsa");
 
   return res;
 };
